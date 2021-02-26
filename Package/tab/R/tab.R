@@ -12,6 +12,9 @@
 #' @param cell Is used when the crosstabulation is needed on cell, by default is False make it true when the crosstabulation is needed by cell
 #' @keywords tab
 #' @export
+#' @importFrom labelled to_factor
+#' @importFrom tidyr pivot_wider
+#' @importFrom dplyr %>%
 #' @examples
 #' tab()
 
@@ -61,7 +64,7 @@ tab <- function(var1,var2 = NULL ,weight = NULL, col  = FALSE,row = FALSE, cell 
   else {
 
     if ((is.null(var2) & !is.null(weight))) {
-            tabe<-aggregate(weight~var1, FUN = sum)
+      tabe<-aggregate(weight~var1, FUN = sum)
       tabe<-data.matrix(tabe[,2])
       ## Sum var1 for the total
       Total<-colSums(tabe)

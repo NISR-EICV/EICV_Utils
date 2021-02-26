@@ -1,6 +1,6 @@
 Package: tab
 Title: Crosstabulation of survey data (Weighted or unweighted data)
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: 
     person(given = "Didier",
            family = "Muhoza",
@@ -16,8 +16,6 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports:
-    dplyr,
+    tidyr,
     labelled,
-   
-
-
+    dplyr
